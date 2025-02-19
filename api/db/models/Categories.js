@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
 
 const schema = mongoose.Schema({
+    name: { type: String, require: true },
     is_active: {
         type: Boolean,
         default: true,
