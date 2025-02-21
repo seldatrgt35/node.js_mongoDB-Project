@@ -11,7 +11,6 @@ const schema = mongoose.Schema({
     },
     created_by: {
         type: mongoose.Schema.Types.ObjectId,
-        required: true,
     },
 
 }, {

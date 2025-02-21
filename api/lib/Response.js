@@ -14,12 +14,21 @@ class Response {
 
     static errorResponse(error) {
 
+        console.error(error);
         if (error instanceof CustomError) {
             return {
                 code: error.code,
                 error: {
                     message: error.message,
                     descrition: error.description
+                }
+            }
+        } else if (error.message.includes("E11000")) {
+            return {
+                code: Enum.HTTP_CODES.CONFLICT,
+                error: {
+                    message: "Already exists!",
+                    descrition: "Already exists!"
                 }
             }
         }
