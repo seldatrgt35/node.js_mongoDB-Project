@@ -7,6 +7,7 @@ const CustomError = require('../lib/Error')
 const Enum = require('../config/Enum')
 const mongoose = require('mongoose');
 const role_privileges = require('../config/role_privileges');
+const AuditLogs = require("../lib/AuditLogs");
 
 /* GET users listing. */
 router.get('/', async (req, res) => {
